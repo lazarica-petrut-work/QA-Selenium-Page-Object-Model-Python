@@ -2,7 +2,7 @@
 
 from selenium.webdriver.common.by import By
 
-from POM.Locators.Locator_Data import LocatorsClass as Locator
+from POM.Locators.Home_Page_Locators import Home_Page_Locators_Class as Locator
 
 class HomePageClass():
 
