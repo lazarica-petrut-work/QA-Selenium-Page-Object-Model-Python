@@ -1,4 +1,3 @@
-#Work in progress
 import time
 import unittest
 
@@ -10,10 +9,11 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 
 ##### Page Classes
+from POM.Pages.Login_Page import LoginPageClass
 from POM.Pages.Home_Page import HomePageClass
 
 # Test Class
-class HomePageTest(unittest.TestCase):
+class LoginPageTest(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls) -> None:
@@ -25,7 +25,22 @@ class HomePageTest(unittest.TestCase):
 
     # Write Tests Down From Here
 
-    #def test_
+    def test_Login(self):
+        # Login
+        login = LoginPageClass(self.driver)
+        ###
+        login.enter_Username("Admin")
+        login.enter_Password("admin123")
+        time.sleep(1)
+        login.click_Login_Button()
+
+        # Delete This, Not in the Right File
+        homepage = HomePageClass(self.driver)
+        ###
+        time.sleep(1)
+        homepage.click_Profile_Button()
+        time.sleep(1)
+        homepage.click_Logout_Button()
 
 
 

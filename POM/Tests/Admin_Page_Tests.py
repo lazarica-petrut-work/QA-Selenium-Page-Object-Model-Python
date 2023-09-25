@@ -1,3 +1,4 @@
+#Work in progress
 import time
 import unittest
 
@@ -11,36 +12,41 @@ from webdriver_manager.chrome import ChromeDriverManager
 ##### Page Classes
 from POM.Pages.Login_Page import LoginPageClass
 from POM.Pages.Home_Page import HomePageClass
+from POM.Pages.Admin_Page import AdminPageClass
+
 
 # Test Class
-class LoginTest(unittest.TestCase):
+class AdminPageTest(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls) -> None:
         ChromeService(ChromeDriverManager().install())
         cls.driver = webdriver.Chrome()
-        cls.driver.get("https://opensource-demo.orangehrmlive.com/")
+        cls.driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers")
         cls.driver.maximize_window()
         cls.driver.implicitly_wait(10)
 
-    # Write Tests Down From Here
 
-    def test_Login(self):
+    def Login(self):
         # Login
         login = LoginPageClass(self.driver)
-        ###
+        #
         login.enter_Username("Admin")
         login.enter_Password("admin123")
-        time.sleep(1)
+        #
         login.click_Login_Button()
 
-        # Logout
-        homepage = HomePageClass(self.driver)
-        ###
-        time.sleep(1)
-        homepage.click_Profile_Button()
-        time.sleep(1)
-        homepage.click_Logout_Button()
+    def ClickAdmin(self):
+        HomePageClass.click_AdminButton()
+
+    # Write Tests Down From Here
+
+    #def test_
+    def test_UserManagementDropdown(self):
+        admin_page = AdminPageClass(self.driver)
+        self.Login()
+        self.ClickAdmin()
+        admin_page.click_UsersManagementDropdown()
 
 
 
