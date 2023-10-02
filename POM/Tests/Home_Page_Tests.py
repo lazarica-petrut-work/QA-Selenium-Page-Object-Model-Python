@@ -10,6 +10,7 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 
 ##### Page Classes
+from POM.Pages.Login_Page import LoginPageClass
 from POM.Pages.Home_Page import HomePageClass
 
 # Test Class
@@ -23,13 +24,31 @@ class HomePageTest(unittest.TestCase):
         cls.driver.maximize_window()
         cls.driver.implicitly_wait(10)
 
+
+    def Login(self):
+        # Login
+        login = LoginPageClass(self.driver)
+        #
+        login.enter_Username("Admin")
+        login.enter_Password("admin123")
+        #
+        login.click_Login_Button()
+
     # Write Tests Down From Here
 
-    #def test_
+    def test_Homebutton(self):
+        home_page = HomePageClass(self.driver)
+        self.Login()
+        time.sleep(2)
+        home_page.click_AdminButton()
+        time.sleep(2)
 
-
-
-
+    def test_log_out(self):
+        home_page = HomePageClass(self.driver)
+        self.Login()
+        time.sleep(2)
+        home_page.click_Logout_Button()
+        time.sleep(2)
 
     # Write Tests Up From Here
 

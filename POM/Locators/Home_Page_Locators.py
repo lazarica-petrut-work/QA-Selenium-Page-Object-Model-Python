@@ -1,9 +1,9 @@
 class Home_Page_Locators_Class():
 
 
-    ### Home Page Objects
+    ### Home Page Locators
     # Profile Button Objects
-    profile_button_xpath = "/html/body/div/div[1]/div[1]/header/div[1]/div[2]/ul/li/span"
+    profile_button_xpath = "/html/body/div/div[1]/div[1]/header/div[1]/div[2]/ul/li/span/p"
     #
     about_button_linktext = "About"
     support_button_linktext = "Support"
@@ -12,7 +12,7 @@ class Home_Page_Locators_Class():
     help_button_xpath = "/html/body/div/div[1]/div[1]/header/div[2]/nav/ul/div/button/i"
 
     ### Search Box
-    search_box = "/html/body/div/div[1]/div[1]/aside/nav/div[2]/div/div/input"
+    search_box_xpath = "/html/body/div/div[1]/div[1]/aside/nav/div[2]/div/div/input"
 
     ### Page Navigation Buttons
     admin_button_xpath = "/html/body/div/div[1]/div[1]/aside/nav/div[2]/ul/li[1]/a/span"

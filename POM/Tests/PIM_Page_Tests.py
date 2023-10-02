@@ -11,7 +11,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 ##### Page Classes
 from POM.Pages.Login_Page import LoginPageClass
 from POM.Pages.Home_Page import HomePageClass
-from POM.Pages.Admin_Page import AdminPageClass
+from POM.Pages.PIM_Page import PIMPageClass
 
 
 # Test Class
@@ -35,24 +35,19 @@ class AdminPageTest(unittest.TestCase):
         #
         login.click_Login_Button()
 
-    def ClickAdmin(self):
+    def ClickPIM(self):
         home_page = HomePageClass(self.driver)
-        home_page.click_AdminButton()
+        home_page.click_PIMButton()
 
     # Write Tests Down From Here
 
-    #def test_
-    def test_UserManagementDropdown(self):
-        admin_page = AdminPageClass(self.driver)
+    def test_Data_Import(self):
+        pim = PIMPageClass(self.driver)
         self.Login()
+        self.ClickPIM()
+        pim.click_ConfigurationDropdown()
         time.sleep(2)
-        self.ClickAdmin()
-        time.sleep(2)
-        admin_page.click_UsersManagementDropdown()
-        time.sleep(2)
-
-
-
+        pim.click_DataImportButton()
 
 
     # Write Tests Up From Here
