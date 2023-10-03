@@ -1,7 +1,8 @@
 class PIM_Page_Locators_Class():
 
-    # Configuration Dropdown
+    ### Configuration Dropdown
     configuration_dropdown_xpath = "/html/body/div/div[1]/div[1]/header/div[2]/nav/ul/li[1]/span"
+    #
     optional_fields_button_linktext = "Optional Fields"
     custom_fields_button_linktext = "Custom Fields"
     data_import_button_linktext = "Data Import"

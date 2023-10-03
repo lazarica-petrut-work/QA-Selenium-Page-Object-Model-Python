@@ -1,10 +1,10 @@
 class Admin_Page_Locators_Class():
 
-    # User Management Dropdown
+    ### User Management Dropdown
     user_management_dropdown_xpath = "/html/body/div/div[1]/div[1]/header/div[2]/nav/ul/li[1]/span"
     users_button_linktext = "Users"
 
-    # Job Dropdown
+    ### Job Dropdown
     job_dropdown_xpath = "/html/body/div/div[1]/div[1]/header/div[2]/nav/ul/li[2]/span"
     job_titles_button_linktext = "Job Titles"
     pay_grades_button_linktext = "Pay Grades"
@@ -12,13 +12,13 @@ class Admin_Page_Locators_Class():
     job_categories_button_linktext = "Job Categories"
     work_shifts_button_linktext = "Work Shifts"
 
-    # Organization Dropdown
+    ### Organization Dropdown
     organization_dropdown_xpath = "/html/body/div/div[1]/div[1]/header/div[2]/nav/ul/li[3]/span"
     general_information_button_linktext = "General Information"
     locations_button_linktext = "Locations"
     structure_button_linktext = "Structure"
 
-    # Qualifications Dropdown
+    ### Qualifications Dropdown
     qualifications_dropdown_xpath = "/html/body/div/div[1]/div[1]/header/div[2]/nav/ul/li[4]/span"
     skills_button_linktext = "Skills"
     education_button_linktext = "Education"
@@ -32,7 +32,7 @@ class Admin_Page_Locators_Class():
     # Corporate Branding
     corporate_branding_button_linktext = "Corporate Branding"
 
-    # Configuration Dropdown
+    ### Configuration Dropdown
     configuration_dropdown_xpath = "/html/body/div/div[1]/div[1]/header/div[2]/nav/ul/li[7]/span"
     email_configuration_button_linktext = "Email Configuration"
     email_subscriptions_button_linktext = "Email Subscriptions"
