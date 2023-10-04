@@ -1,4 +1,4 @@
-class PIM_Page_Locators_Class():
+class PIMPageLocatorsClass():
 
     ### Configuration Dropdown
     configuration_dropdown_xpath = "/html/body/div/div[1]/div[1]/header/div[2]/nav/ul/li[1]/span"

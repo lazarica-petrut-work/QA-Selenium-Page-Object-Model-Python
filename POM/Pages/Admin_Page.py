@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 ###
-from POM.Locators.Admin_Page_Locators import Admin_Page_Locators_Class as Locator
+from POM.Locators.Admin_Page_Locators import AdminPageLocatorsClass as Locator
 
 class AdminPageClass():
 

@@ -1,4 +1,4 @@
-class Admin_Page_Locators_Class():
+class AdminPageLocatorsClass():
 
     ### User Management Dropdown
     user_management_dropdown_xpath = "/html/body/div/div[1]/div[1]/header/div[2]/nav/ul/li[1]/span"

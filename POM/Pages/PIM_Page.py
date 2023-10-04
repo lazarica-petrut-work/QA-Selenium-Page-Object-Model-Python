@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 ###
-from POM.Locators.PIM_Page_Locators import PIM_Page_Locators_Class as Locator
+from POM.Locators.PIM_Page_Locators import PIMPageLocatorsClass as Locator
 
 class PIMPageClass():
 
