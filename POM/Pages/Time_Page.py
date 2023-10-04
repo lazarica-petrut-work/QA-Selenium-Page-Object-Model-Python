@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 ###
-from POM.Locators.Time_Page_Locator import TimePageLocatorsClass as Locator
+from POM.Locators.Time_Page_Locators import TimePageLocatorsClass as Locator
 
 class TimePageClass():
 
