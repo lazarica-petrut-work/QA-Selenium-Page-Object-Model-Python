@@ -11,7 +11,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 ##### Page Classes
 from POM.Pages.Login_Page import LoginPageClass
 from POM.Pages.Home_Page import HomePageClass
-from POM.Pages.Recruitment_Page import RecruitmentPageClass
+from POM.Pages.Performance_Page import PerformancePageClass
 
 
 # Test Class
@@ -35,19 +35,21 @@ class AdminPageTest(unittest.TestCase):
         #
         login.click_Login_Button()
 
-    def ClickLeaveButton(self):
+    def ClickPerformanceButton(self):
         home_page = HomePageClass(self.driver)
-        home_page.click_RecruitmentButton()
+        home_page.click_PerformanceButton()
 
     # Write Tests Down From Here
 
     def test_Add_Elements(self):
-        recruitment_page = RecruitmentPageClass(self.driver)
+        recruitment_page = PerformancePageClass(self.driver)
         self.Login()
         time.sleep(1)
-        self.ClickLeaveButton()
+        self.ClickPerformanceButton()
         time.sleep(1)
-        recruitment_page.click_VacanciesButton()
+        recruitment_page.click_ManageReviewsDropdown()
+        time.sleep(1)
+        recruitment_page.click_ManageReviewsButton()
         time.sleep(1)
 
 
