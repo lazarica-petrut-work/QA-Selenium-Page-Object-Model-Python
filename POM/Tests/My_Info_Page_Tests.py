@@ -17,13 +17,12 @@ from POM.Pages.My_Info_Page import MyInfoPageClass
 # Test Class
 class MyInfoPageTest(unittest.TestCase):
 
-    @classmethod
-    def setUpClass(cls) -> None:
+    def setUp(self) -> None:
         ChromeService(ChromeDriverManager().install())
-        cls.driver = webdriver.Chrome()
-        cls.driver.get("https://opensource-demo.orangehrmlive.com/")
-        cls.driver.maximize_window()
-        cls.driver.implicitly_wait(10)
+        self.driver = webdriver.Chrome()
+        self.driver.get("https://opensource-demo.orangehrmlive.com/")
+        self.driver.maximize_window()
+        self.driver.implicitly_wait(10)
 
 
     def Login(self):
@@ -57,9 +56,8 @@ class MyInfoPageTest(unittest.TestCase):
 
     # Write Tests Up From Here
 
-    @classmethod
-    def tearDownClass(cls) -> None:
-        cls.driver.quit()
+    def tearDown(self) -> None:
+        self.driver.quit()
 
 
 if __name__ == "__main__":

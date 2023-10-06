@@ -15,15 +15,14 @@ from POM.Pages.Recruitment_Page import RecruitmentPageClass
 
 
 # Test Class
-class AdminPageTest(unittest.TestCase):
+class RecruitmentPageTest(unittest.TestCase):
 
-    @classmethod
-    def setUpClass(cls) -> None:
+    def setUp(self) -> None:
         ChromeService(ChromeDriverManager().install())
-        cls.driver = webdriver.Chrome()
-        cls.driver.get("https://opensource-demo.orangehrmlive.com/")
-        cls.driver.maximize_window()
-        cls.driver.implicitly_wait(10)
+        self.driver = webdriver.Chrome()
+        self.driver.get("https://opensource-demo.orangehrmlive.com/")
+        self.driver.maximize_window()
+        self.driver.implicitly_wait(10)
 
 
     def Login(self):
@@ -57,9 +56,8 @@ class AdminPageTest(unittest.TestCase):
 
     # Write Tests Up From Here
 
-    @classmethod
-    def tearDownClass(cls) -> None:
-        cls.driver.quit()
+    def tearDown(self) -> None:
+        self.driver.quit()
 
 
 if __name__ == "__main__":

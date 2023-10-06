@@ -16,13 +16,13 @@ from POM.Pages.Home_Page import HomePageClass
 # Test Class
 class HomePageTest(unittest.TestCase):
 
-    @classmethod
-    def setUpClass(cls) -> None:
+
+    def setUp(self) -> None:
         ChromeService(ChromeDriverManager().install())
-        cls.driver = webdriver.Chrome()
-        cls.driver.get("https://opensource-demo.orangehrmlive.com/")
-        cls.driver.maximize_window()
-        cls.driver.implicitly_wait(10)
+        self.driver = webdriver.Chrome()
+        self.driver.get("https://opensource-demo.orangehrmlive.com/")
+        self.driver.maximize_window()
+        self.driver.implicitly_wait(10)
 
 
     def Login(self):
@@ -46,15 +46,17 @@ class HomePageTest(unittest.TestCase):
     def test_log_out(self):
         home_page = HomePageClass(self.driver)
         self.Login()
+        time.sleep(1)
+        home_page.click_Profile_Button()
         time.sleep(2)
         home_page.click_Logout_Button()
         time.sleep(2)
 
     # Write Tests Up From Here
 
-    @classmethod
-    def tearDownClass(cls) -> None:
-        cls.driver.quit()
+
+    def tearDown(self) -> None:
+        self.driver.quit()
 
 
 if __name__ == "__main__":
