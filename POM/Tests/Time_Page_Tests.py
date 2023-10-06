@@ -17,6 +17,7 @@ from POM.Pages.Time_Page import TimePageClass
 # Test Class
 class TimePageTest(unittest.TestCase):
 
+    @classmethod
     def setUp(self) -> None:
         ChromeService(ChromeDriverManager().install())
         self.driver = webdriver.Chrome()
@@ -57,6 +58,7 @@ class TimePageTest(unittest.TestCase):
 
     # Write Tests Up From Here
 
+    @classmethod
     def tearDown(self) -> None:
         self.driver.quit()
 

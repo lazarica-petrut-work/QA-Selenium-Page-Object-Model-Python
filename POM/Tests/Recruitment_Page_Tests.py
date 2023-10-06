@@ -17,6 +17,7 @@ from POM.Pages.Recruitment_Page import RecruitmentPageClass
 # Test Class
 class RecruitmentPageTest(unittest.TestCase):
 
+    @classmethod
     def setUp(self) -> None:
         ChromeService(ChromeDriverManager().install())
         self.driver = webdriver.Chrome()
@@ -56,6 +57,7 @@ class RecruitmentPageTest(unittest.TestCase):
 
     # Write Tests Up From Here
 
+    @classmethod
     def tearDown(self) -> None:
         self.driver.quit()
 

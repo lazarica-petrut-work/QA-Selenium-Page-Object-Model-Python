@@ -16,7 +16,7 @@ from POM.Pages.Home_Page import HomePageClass
 # Test Class
 class HomePageTest(unittest.TestCase):
 
-
+    @classmethod
     def setUp(self) -> None:
         ChromeService(ChromeDriverManager().install())
         self.driver = webdriver.Chrome()
@@ -54,7 +54,7 @@ class HomePageTest(unittest.TestCase):
 
     # Write Tests Up From Here
 
-
+    @classmethod
     def tearDown(self) -> None:
         self.driver.quit()
 

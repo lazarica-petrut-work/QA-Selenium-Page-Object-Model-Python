@@ -17,6 +17,7 @@ from POM.Pages.My_Info_Page import MyInfoPageClass
 # Test Class
 class MyInfoPageTest(unittest.TestCase):
 
+    @classmethod
     def setUp(self) -> None:
         ChromeService(ChromeDriverManager().install())
         self.driver = webdriver.Chrome()
@@ -56,6 +57,7 @@ class MyInfoPageTest(unittest.TestCase):
 
     # Write Tests Up From Here
 
+    @classmethod
     def tearDown(self) -> None:
         self.driver.quit()
 

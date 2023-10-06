@@ -17,6 +17,7 @@ from POM.Pages.Admin_Page import AdminPageClass
 # Test Class
 class AdminPageTest(unittest.TestCase):
 
+    @classmethod
     def setUp(self) -> None:
         ChromeService(ChromeDriverManager().install())
         self.driver = webdriver.Chrome()
@@ -56,6 +57,7 @@ class AdminPageTest(unittest.TestCase):
 
     # Write Tests Up From Here
 
+    @classmethod
     def tearDown(self) -> None:
         self.driver.quit()
 

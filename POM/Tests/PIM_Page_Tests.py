@@ -17,6 +17,7 @@ from POM.Pages.PIM_Page import PIMPageClass
 # Test Class
 class PIMPageTest(unittest.TestCase):
 
+    @classmethod
     def setUp(self) -> None:
         ChromeService(ChromeDriverManager().install())
         self.driver = webdriver.Chrome()
@@ -51,6 +52,7 @@ class PIMPageTest(unittest.TestCase):
 
     # Write Tests Up From Here
 
+    @classmethod
     def tearDown(self) -> None:
         self.driver.quit()
 
